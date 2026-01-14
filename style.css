@@ -1,0 +1,71 @@
+/* Dark background for high contrast */
+body { 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #0f0f0f; /* Constant dark contrast */
+    color: white; 
+}
+
+.container { text-align: center; }
+
+/* Stylish Gaming Heading */
+.glitter-heading {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* Neon Glow effect */
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+}
+
+#status { 
+    font-size: 1.5rem; 
+    margin-bottom: 25px; 
+    color: #f1c40f; 
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+}
+
+.game-board {
+    display: grid; 
+    grid-template-columns: repeat(3, 110px); 
+    grid-template-rows: repeat(3, 110px);
+    gap: 15px; 
+    position: relative; 
+    margin: 0 auto 30px;
+}
+
+.cell {
+    width: 110px; height: 110px; 
+    background-color: #1e272e; 
+    border: 3px solid #3d3d3d;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 60px; cursor: pointer; border-radius: 12px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.cell:hover { background-color: #2f3640; transform: scale(1.05); }
+
+/* WOW Colors for X and O */
+.cell.x-color { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; } 
+.cell.o-color { color: #ff9f43; text-shadow: 0 0 15px #ff9f43; } 
+
+#winning-line {
+    position: absolute; background-color: #ff4757; display: none;
+    z-index: 10; border-radius: 10px; box-shadow: 0 0 20px #ff4757;
+}
+
+#reset-btn {
+    padding: 15px 35px; font-size: 1.2rem; cursor: pointer;
+    background: linear-gradient(45deg, #1dd1a1, #10ac84);
+    color: white; border: none; border-radius: 50px;
+    font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#reset-btn:active { transform: scale(0.95); }
