@@ -53,7 +53,7 @@ function checkResult() {
         // Trigger Glittering Papers (Confetti)
         confetti({ particleCount: 200, spread: 90, origin: { y: 0.6 } });
         
-        setTimeout(() => { alert("WOW! Player " + currentPlayer + " is the winner!"); }, 400);
+        
         return;
     }
 
@@ -81,4 +81,5 @@ function restartGame() {
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+
 resetBtn.addEventListener('click', restartGame);
